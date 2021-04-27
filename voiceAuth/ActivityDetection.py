@@ -4,7 +4,7 @@ import scipy.io.wavfile as wav
 from AudioSample import AudioSample
 
 class ActivityDetection:
-    def __init__(self, noisepath=Path("voiceAuth","data","backgroundnoise.wav")):
+    def __init__(self):
         #self.noise = AudioSample(noisepath, self)   
         pass
 

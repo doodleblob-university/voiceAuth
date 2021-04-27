@@ -3,6 +3,8 @@ import scipy.io.wavfile as wav
 
 import numpy as np
 
+from MFCCFeatures import MFCCFeatures as MFCC
+
 class AudioSample:
     def __init__(self, path, ad):
         self.ad = ad
@@ -23,9 +25,4 @@ class AudioSample:
         #TODO: VAD to isolate areas of voice activity
 
         #TODO: Apply MFCC (and LPC?)
-        #fextractor = FeaturesExtractor()
-        #features = fextractor.extract_features(self.signal, self.rate)
-
-        pass
-        
-        
+        self.mfcc, self.delta, self.ddelta = MFCC.getFeatures(self.rate, self.signal)
