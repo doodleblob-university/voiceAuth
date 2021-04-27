@@ -2,5 +2,5 @@ __pycache__
 voiceAuth/voiceAuthEnv/
 voiceAuth/activate
 voiceAuth/samples/*.wav
-voiceAuth/users/*.gmm
-test.py
+voiceAuth/models/*.gmm
+testing/

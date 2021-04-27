@@ -12,6 +12,6 @@ class MFCCFeatures():
 
         mfccFeature = preprocessing.scale(mfccf)
         deltas = delta(mfccf, 2)
-        #ddeltas = delta(deltas, 2)
+        ddeltas = delta(deltas, 2)
 
-        return mfccFeature, deltas
+        return mfccFeature, deltas, ddeltas

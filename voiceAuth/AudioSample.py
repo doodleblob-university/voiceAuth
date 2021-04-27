@@ -24,4 +24,5 @@ class AudioSample:
         #TODO: VAD to isolate areas of voice activity
         #TODO: noise reduction
 
-        self.mfccFeature, self.deltas = MFCC.getFeatures(self.rate, self.signal)
+        self.features = np.hstack( (MFCC.getFeatures(self.rate, self.signal)) )
+
