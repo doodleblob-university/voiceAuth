@@ -3,6 +3,8 @@ import scipy.io.wavfile as wav
 
 import numpy as np
 
+from MFCCFeatures import MFCCFeatures as MFCC
+
 class AudioSample:
     def __init__(self, path, ad):
         self.ad = ad
@@ -19,13 +21,8 @@ class AudioSample:
 
         
     def __processSignal(self):
-        # https://www.kaggle.com/ilyamich/mfcc-implementation-and-tutorial
         #TODO: VAD to isolate areas of voice activity
+        #TODO: noise reduction
 
-        #TODO: Apply MFCC (and LPC?)
-        #fextractor = FeaturesExtractor()
-        #features = fextractor.extract_features(self.signal, self.rate)
+        self.features = np.hstack( (MFCC.getFeatures(self.rate, self.signal)) )
 
-        pass
-        
-        
