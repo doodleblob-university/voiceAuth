@@ -21,8 +21,7 @@ class AudioSample:
 
         
     def __processSignal(self):
-        # https://www.kaggle.com/ilyamich/mfcc-implementation-and-tutorial
         #TODO: VAD to isolate areas of voice activity
+        #TODO: noise reduction
 
-        #TODO: Apply MFCC (and LPC?)
-        self.mfcc, self.delta, self.ddelta = MFCC.getFeatures(self.rate, self.signal)
+        self.mfccFeature, self.deltas = MFCC.getFeatures(self.rate, self.signal)
