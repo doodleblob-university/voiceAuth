@@ -2,3 +2,4 @@ __pycache__
 voiceAuth/voiceAuthEnv/
 voiceAuth/activate
 voiceAuth/samples/*.wav
+test.py
